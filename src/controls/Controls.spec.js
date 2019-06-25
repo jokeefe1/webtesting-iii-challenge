@@ -8,7 +8,6 @@ import Controls from '../controls/Controls'
 it('should call toggleClosed to change on button click', () => {
     const toggleClosed = jest.fn()
     const { getByText } = render(<Controls toggleClosed={toggleClosed} />)
-
     const button = getByText(/close gate/i)
     fireEvent.click(button)
 })
