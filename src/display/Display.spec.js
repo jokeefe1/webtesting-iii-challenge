@@ -19,7 +19,6 @@ it('should display Locked if the locked prop is true', () => {
 
 it('should have red-led class when locked or closed', () => {
     const { getByText } = render(<Display locked={true} />)
-
     const locked = getByText(/locked/i)
 
     expect(locked).toHaveClass('red-led')
@@ -27,7 +26,6 @@ it('should have red-led class when locked or closed', () => {
 
 it('should have green-led class when unlocked or open', () => {
     const { getByText } = render(<Display locked={false} />)
-
     const locked = getByText(/unlocked/i)
 
     expect(locked).toHaveClass('green-led')
